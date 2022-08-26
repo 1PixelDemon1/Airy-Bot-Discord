@@ -37,7 +37,7 @@ namespace AiryBot
         {
             StreamReader reader = new StreamReader("token.json");
                 string text = reader.ReadLine();
-
+            // Returns token of Discord Bot. 
             return text;
         }
     }
