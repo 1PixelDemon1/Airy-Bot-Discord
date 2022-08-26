@@ -17,40 +17,29 @@ namespace AiryBot
 
         static async Task MainAsync()
         {
-
-   
-
-
-
-
-            
-            respond.addActivity(new Activity("привет", new List<string>(), ((i) => { Console.WriteLine("Привет"); return false; })));
-
             var discord = new DiscordClient(new DiscordConfiguration()
-
             {
                 Token = GetToken(),
                 TokenType = TokenType.Bot,
                 MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
             });
 
+            Binder binder = new Binder(ref respond, discord);
+
             discord.MessageCreated += async (s, e) =>
             {
                 if (respond.isActivity(e.Message.Content)) {
                     respond.performActivity(e.Message.Content);
-
                 } 
-
-
                 //if (e.Message.Content.ToLower().StartsWith("айри!"))
                 //    await e.Message.RespondAsync("Привет!");
-
             };
+
+
 
             await discord.ConnectAsync();
             await Task.Delay(-1);
         }
-
 
 
         static string GetToken()

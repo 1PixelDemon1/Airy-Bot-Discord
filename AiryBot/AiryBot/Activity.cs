@@ -9,7 +9,7 @@ namespace AiryBot
 {
     internal class Activity
     {
-        public delegate bool act(List<string> parametres);
+        public delegate void act(List<string> parametres);
 
         private string keyword;
         private List<string> parametres;
@@ -20,7 +20,7 @@ namespace AiryBot
             parametres = parametres_;
             action = action_;
         }
-        public bool perform() => action(parametres);
+        public void perform() => action(parametres);
 
         public string getKeyword() => keyword;
     }
