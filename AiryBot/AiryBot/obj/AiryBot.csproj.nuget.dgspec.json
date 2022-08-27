@@ -47,6 +47,14 @@
             "DSharpPlus.CommandsNext": {
               "target": "Package",
               "version": "[4.2.0, )"
+            },
+            "DSharpPlus.Interactivity": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "DSharpPlus.VoiceNext": {
+              "target": "Package",
+              "version": "[4.2.0, )"
             }
           },
           "imports": [

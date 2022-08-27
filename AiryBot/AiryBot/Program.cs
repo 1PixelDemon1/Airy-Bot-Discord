@@ -2,6 +2,8 @@
 using DSharpPlus;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
+using DSharpPlus.VoiceNext;
+using DSharpPlus.Entities;
 
 namespace AiryBot
 {
@@ -26,28 +28,30 @@ namespace AiryBot
 
             Binder binder = new Binder(ref respond, discord);
 
-            discord.MessageCreated += async (s, e) =>
-            {
-                if (respond.isActivity(e.Message.Content)) {
-                    respond.performActivity(e.Message.Content);
-                } 
-                //if (e.Message.Content.ToLower().StartsWith("айри!"))
-                //    await e.Message.RespondAsync("Привет!");
-            };
-
-
+            // Заходит в голосовой канал после запyска.
+            JoinVoiceAfterStart(discord);
 
             await discord.ConnectAsync();
             await Task.Delay(-1);
         }
 
+        
 
         static string GetToken()
         {
             StreamReader reader = new StreamReader("token.json");
                 string text = reader.ReadLine();
-            // Returns token of Discord Bot. 
+            // Возвращает токен бота.
             return text;
+        }
+
+
+        static public async void JoinVoiceAfterStart(DiscordClient discord)
+        {
+            discord.UseVoiceNext();
+            await Task.Delay(3000);
+            DiscordChannel channel = await discord.GetChannelAsync(1012965027625582622);
+            VoiceNextConnection connection = await channel.ConnectAsync();
         }
     }
 }

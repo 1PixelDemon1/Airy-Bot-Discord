@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "MlCGyhDLBlx4cRKgly4w9tGKKPiODlABIFmtZQN4ry065DVdXZkyu8a3nFVoWhkooHTBe/BwU+TztGQqfrre0Q==",
+  "dgSpecHash": "W0yHNYuOYaA9zz38OoXrHGnjR76lxEC/rl+BpDYsj9PFae9ZuIHyne/ibcRRxwW1rhT1JELUnyBz6CzVQylm3A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Msi\\Documents\\GitHub\\Airy-Bot-Discord\\AiryBot\\AiryBot\\AiryBot.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Msi\\.nuget\\packages\\concurrenthashset\\1.1.0\\concurrenthashset.1.1.0.nupkg.sha512",
     "C:\\Users\\Msi\\.nuget\\packages\\dsharpplus\\4.2.0\\dsharpplus.4.2.0.nupkg.sha512",
     "C:\\Users\\Msi\\.nuget\\packages\\dsharpplus.commandsnext\\4.2.0\\dsharpplus.commandsnext.4.2.0.nupkg.sha512",
+    "C:\\Users\\Msi\\.nuget\\packages\\dsharpplus.interactivity\\4.2.0\\dsharpplus.interactivity.4.2.0.nupkg.sha512",
+    "C:\\Users\\Msi\\.nuget\\packages\\dsharpplus.voicenext\\4.2.0\\dsharpplus.voicenext.4.2.0.nupkg.sha512",
+    "C:\\Users\\Msi\\.nuget\\packages\\dsharpplus.voicenext.natives\\1.0.0\\dsharpplus.voicenext.natives.1.0.0.nupkg.sha512",
     "C:\\Users\\Msi\\.nuget\\packages\\emzi0767.common\\2.6.2\\emzi0767.common.2.6.2.nupkg.sha512",
     "C:\\Users\\Msi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\Msi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",

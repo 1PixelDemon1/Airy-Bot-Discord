@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "ConcurrentHashSet/1.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ConcurrentCollections.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ConcurrentCollections.dll": {}
+        }
+      },
       "DSharpPlus/4.2.0": {
         "type": "package",
         "dependencies": {
@@ -33,6 +42,54 @@
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.CommandsNext.dll": {}
+        }
+      },
+      "DSharpPlus.Interactivity/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "ConcurrentHashSet": "1.1.0",
+          "DSharpPlus": "4.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {}
+        }
+      },
+      "DSharpPlus.VoiceNext/4.2.0": {
+        "type": "package",
+        "dependencies": {
+          "DSharpPlus": "4.2.0",
+          "DSharpPlus.VoiceNext.Natives": "1.0.0",
+          "System.Threading.Channels": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DSharpPlus.VoiceNext.dll": {}
+        }
+      },
+      "DSharpPlus.VoiceNext.Natives/1.0.0": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/win-x64/native/libopus.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/libsodium.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/libopus.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libsodium.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
         }
       },
       "Emzi0767.Common/2.6.2": {
@@ -1221,6 +1278,23 @@
     }
   },
   "libraries": {
+    "ConcurrentHashSet/1.1.0": {
+      "sha512": "1SuuhZe0wUJbchXdjS23O+quojkw0IXqM9LtUp3RwgQreDI4cj1lfDbdHnD4fOYEnUrftzVIYoonvPlsXm30Bg==",
+      "type": "package",
+      "path": "concurrenthashset/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "concurrenthashset.1.1.0.nupkg.sha512",
+        "concurrenthashset.nuspec",
+        "lib/net461/ConcurrentCollections.dll",
+        "lib/net461/ConcurrentCollections.xml",
+        "lib/netstandard1.0/ConcurrentCollections.dll",
+        "lib/netstandard1.0/ConcurrentCollections.xml",
+        "lib/netstandard2.0/ConcurrentCollections.dll",
+        "lib/netstandard2.0/ConcurrentCollections.xml"
+      ]
+    },
     "DSharpPlus/4.2.0": {
       "sha512": "sdQQS6ud6UAA7qUXOi5pyt1NMkBuAJ8SdssNJykE+sUXpDfD23Ja1AgUo+QktkTv1/jvQfcyET7HqgpBFdmjmw==",
       "type": "package",
@@ -1247,6 +1321,49 @@
         "dsharpplus.png",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.dll",
         "lib/netstandard2.0/DSharpPlus.CommandsNext.xml"
+      ]
+    },
+    "DSharpPlus.Interactivity/4.2.0": {
+      "sha512": "ZCYFmLT+LNwZygNXX4C1RQI3cSs2zTLaIoam8cAp8TIdani5xVxMF0CTOtUNxXy/pjRyYcfjnY/USWN9kz2cqg==",
+      "type": "package",
+      "path": "dsharpplus.interactivity/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dsharpplus.interactivity.4.2.0.nupkg.sha512",
+        "dsharpplus.interactivity.nuspec",
+        "dsharpplus.png",
+        "lib/netstandard2.0/DSharpPlus.Interactivity.dll",
+        "lib/netstandard2.0/DSharpPlus.Interactivity.xml"
+      ]
+    },
+    "DSharpPlus.VoiceNext/4.2.0": {
+      "sha512": "nTc+u++d4+qU8kxYfjPZj+05oVDeqzrtYTGiH8qY1ssQPTi1M2yNPzK8+H1yxKKvcCnvlboxTN5Z8etc6ycLaQ==",
+      "type": "package",
+      "path": "dsharpplus.voicenext/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dsharpplus.png",
+        "dsharpplus.voicenext.4.2.0.nupkg.sha512",
+        "dsharpplus.voicenext.nuspec",
+        "lib/netstandard2.0/DSharpPlus.VoiceNext.dll",
+        "lib/netstandard2.0/DSharpPlus.VoiceNext.xml"
+      ]
+    },
+    "DSharpPlus.VoiceNext.Natives/1.0.0": {
+      "sha512": "U+UtMpommsfh+OOgLYQBy1e+53P/q6/LW18bgIJqsyshhThhiyEH8ISnpESdQrcqEDj6Nud7+FbnNi7N4QtDGw==",
+      "type": "package",
+      "path": "dsharpplus.voicenext.natives/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dsharpplus.voicenext.natives.1.0.0.nupkg.sha512",
+        "dsharpplus.voicenext.natives.nuspec",
+        "runtimes/win-x64/native/libopus.dll",
+        "runtimes/win-x64/native/libsodium.dll",
+        "runtimes/win-x86/native/libopus.dll",
+        "runtimes/win-x86/native/libsodium.dll"
       ]
     },
     "Emzi0767.Common/2.6.2": {
@@ -4237,7 +4354,9 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "DSharpPlus >= 4.2.0",
-      "DSharpPlus.CommandsNext >= 4.2.0"
+      "DSharpPlus.CommandsNext >= 4.2.0",
+      "DSharpPlus.Interactivity >= 4.2.0",
+      "DSharpPlus.VoiceNext >= 4.2.0"
     ]
   },
   "packageFolders": {
@@ -4284,6 +4403,14 @@
             "version": "[4.2.0, )"
           },
           "DSharpPlus.CommandsNext": {
+            "target": "Package",
+            "version": "[4.2.0, )"
+          },
+          "DSharpPlus.Interactivity": {
+            "target": "Package",
+            "version": "[4.2.0, )"
+          },
+          "DSharpPlus.VoiceNext": {
             "target": "Package",
             "version": "[4.2.0, )"
           }
