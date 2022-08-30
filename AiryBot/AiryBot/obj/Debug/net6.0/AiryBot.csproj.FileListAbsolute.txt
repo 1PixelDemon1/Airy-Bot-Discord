@@ -74,3 +74,10 @@ C:\Users\Msi\Documents\GitHub\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\
 C:\Users\Msi\Documents\GitHub\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\runtimes\win-x64\native\libsodium.dll
 C:\Users\Msi\Documents\GitHub\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\runtimes\win-x86\native\libopus.dll
 C:\Users\Msi\Documents\GitHub\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\runtimes\win-x86\native\libsodium.dll
+C:\Users\winpx\Desktop\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\ConcurrentCollections.dll
+C:\Users\winpx\Desktop\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\DSharpPlus.Interactivity.dll
+C:\Users\winpx\Desktop\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\DSharpPlus.VoiceNext.dll
+C:\Users\winpx\Desktop\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\runtimes\win-x64\native\libopus.dll
+C:\Users\winpx\Desktop\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\runtimes\win-x64\native\libsodium.dll
+C:\Users\winpx\Desktop\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\runtimes\win-x86\native\libopus.dll
+C:\Users\winpx\Desktop\Airy-Bot-Discord\AiryBot\AiryBot\bin\Debug\net6.0\runtimes\win-x86\native\libsodium.dll

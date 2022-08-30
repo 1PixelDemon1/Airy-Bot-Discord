@@ -29,10 +29,20 @@ namespace AiryBot
             Binder binder = new Binder(ref respond, discord);
 
             // Заходит в голосовой канал после запyска.
-            JoinVoiceAfterStart(discord);
+
+            discord.MessageCreated += async (s, e) =>
+            {
+                if (respond.isActivity(e.Message.Content))
+                {
+                    respond.performActivity(e.Message.Content);
+
+                }
+            };
 
             await discord.ConnectAsync();
             await Task.Delay(-1);
+            
+            JoinVoiceAfterStart(discord);
         }
 
         

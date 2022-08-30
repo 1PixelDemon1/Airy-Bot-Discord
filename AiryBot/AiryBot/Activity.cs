@@ -9,13 +9,13 @@ namespace AiryBot
 {
     internal class Activity
     {
-        public delegate void act(List<string> parametres);
+        public delegate void act(List<object> parametres);
 
         private string keyword;
-        private List<string> parametres;
+        private List<object> parametres;
         private act action;
 
-        public Activity(string keyword_, List <string> parametres_, act action_) {
+        public Activity(string keyword_, List <object> parametres_, act action_) {
             keyword = keyword_;
             parametres = parametres_;
             action = action_;
