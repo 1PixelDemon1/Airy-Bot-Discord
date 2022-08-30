@@ -1,15 +1,11 @@
 ﻿using System;
 using DSharpPlus;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-using Serilog;
+
 namespace AiryBot
 {
     class Bot
     {
-
-        static private Respond respond = new Respond();
-
         static void Main()
         {
             MainAsync().GetAwaiter().GetResult();
@@ -17,15 +13,6 @@ namespace AiryBot
 
         static async Task MainAsync()
         {
-
-   
-
-
-
-
-            
-            respond.addActivity(new Activity("привет", new List<string>(), ((i) => { Console.WriteLine("Привет"); return false; })));
-
             var discord = new DiscordClient(new DiscordConfiguration()
 
             {
@@ -35,14 +22,8 @@ namespace AiryBot
 
             discord.MessageCreated += async (s, e) =>
             {
-                if (respond.isActivity(e.Message.Content)) {
-                    respond.performActivity(e.Message.Content);
-
-                } 
-
-
-                //if (e.Message.Content.ToLower().StartsWith("айри!"))
-                //    await e.Message.RespondAsync("Привет!");
+                if (e.Message.Content.ToLower().StartsWith("айри!"))
+                    await e.Message.RespondAsync("Привет!");
 
             };
 
