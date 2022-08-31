@@ -59,9 +59,17 @@ namespace AiryBot
         static public async void JoinVoiceAfterStart(DiscordClient discord)
         {
             discord.UseVoiceNext();
-            await Task.Delay(3000);
+            await Task.Delay(5000);
             DiscordChannel channel = await discord.GetChannelAsync(1012965027625582622);
             VoiceNextConnection connection = await channel.ConnectAsync();
         }
+
+        static public async void ChangeChannelName(DiscordClient discord)
+        {
+            // Меняет название канала на сервере.
+            DiscordChannel channel = await discord.GetChannelAsync(1012965027625582622);
+            // discord = await channel.ModifyAsync("     "); // Оно должно менять имя, но я хз что нyжно поменять.
+        }
+
     }
 }
