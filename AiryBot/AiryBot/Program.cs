@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using DSharpPlus.VoiceNext;
 using DSharpPlus.Entities;
+using DSharpPlus.Net.Models;
 
 namespace AiryBot
 {
@@ -30,19 +31,11 @@ namespace AiryBot
 
             // Заходит в голосовой канал после запyска.
 
-            discord.MessageCreated += async (s, e) =>
-            {
-                if (respond.isActivity(e.Message.Content))
-                {
-                    respond.performActivity(e.Message.Content);
-
-                }
-            };
+            JoinVoiceAfterStart(discord);
+            ChangeChannelName(discord);
 
             await discord.ConnectAsync();
             await Task.Delay(-1);
-            
-            JoinVoiceAfterStart(discord);
         }
 
         
@@ -68,7 +61,9 @@ namespace AiryBot
         {
             // Меняет название канала на сервере.
             DiscordChannel channel = await discord.GetChannelAsync(1012965027625582622);
-            // discord = await channel.ModifyAsync("     "); // Оно должно менять имя, но я хз что нyжно поменять.
+            Action<ChannelEditModel> action = new(x => x.Name = "Hi");
+            Console.WriteLine("Succes!");
+            await channel.ModifyAsync(action);
         }
 
     }

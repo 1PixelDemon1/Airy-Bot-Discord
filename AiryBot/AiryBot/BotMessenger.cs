@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DSharpPlus.Entities;
 
 namespace AiryBot
 {
@@ -26,6 +27,18 @@ namespace AiryBot
             parametres.Add(message);
             sendMessage(parametres);
         }
+
+        //public static async void newMessege(List<object> parametres)
+        //{
+        //    DiscordClient? discord = parametres[0] as DiscordClient;
+        //    DiscordEmbedBuilder embedMessege = new DiscordEmbedBuilder();
+
+        //    static Optional<DiscordColor> color("Gold")
+
+
+        //    parametres.Add(message);
+        //    sendMessage(parametres);
+        //}
 
     }
 }
