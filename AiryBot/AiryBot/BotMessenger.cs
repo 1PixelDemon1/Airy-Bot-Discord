@@ -21,7 +21,7 @@ namespace AiryBot
 
         public static async void sendUpdate(List<object> parametres) {
             DiscordClient? discord = parametres[0] as DiscordClient;
-            string? message = $"Update! Нyжна помощь Арсения! -> program/ChangeChannelName" +
+            string? message = $"Update! \"Voice channel name changing!\" " +
                              $"{(await discord.GetUserAsync(442360320107741195)).Mention}" +
                              $" {(await discord.GetUserAsync(739409836160188509)).Mention}";
             parametres.Add(message);

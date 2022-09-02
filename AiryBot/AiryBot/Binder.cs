@@ -24,8 +24,6 @@ namespace AiryBot
                 DiscordChannel channel = await discord.GetChannelAsync(1012965027625582622);
                 VoiceNextConnection connection = await channel.ConnectAsync();
             }));
-
-
         }
     }
 }
